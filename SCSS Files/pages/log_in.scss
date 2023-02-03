@@ -1,0 +1,192 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+// additional page styling
+
+body {
+  min-height: 100vh;
+  @extend %flex-center-center;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.card {
+  @extend %border-radius-10;
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  background-color: $white-color;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 767px) {
+    max-width: 400px;
+  }
+  .left {
+    width: 50%;
+    padding: $main-element-padding {
+      top: $up-down-padding / 2;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+    .back-btn {
+      @include back-btn($main-element-padding, $sec-element-padding);
+    }
+    .head {
+      text-align: center;
+      padding-bottom: $main-element-padding;
+      h2,
+      p {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        color: $main-color;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+    }
+    form {
+      section {
+        padding-bottom: $main-element-padding;
+        &:last-of-type {
+          @extend %flex-center-between;
+        }
+        label {
+          margin-bottom: $sec-element-padding;
+        }
+        .field {
+          @extend %flex-center-center;
+          flex-direction: row-reverse;
+          border-bottom: 2px solid $sec-color;
+          position: relative;
+          &::after {
+            @extend %error-sign;
+          }
+          input {
+            flex: 1;
+            padding: $field-top-padding $sec-element-padding;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+          i {
+            color: $sec-color;
+          }
+        }
+        .left-sec {
+          display: flex;
+          gap: $field-top-padding;
+          input {
+            @include check-box-shape($main-color);
+          }
+          label {
+            margin: 0;
+            font-size: 1rem;
+            cursor: pointer;
+          }
+        }
+        .right-sec {
+          a {
+            font-size: 0.9rem;
+            color: $sec-color;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+      }
+      input[type="submit"] {
+        @extend %button-shape;
+      }
+    }
+    .reg-link {
+      @extend %flex-center-center;
+      padding-top: $main-element-padding;
+      padding-bottom: $main-element-padding;
+      a {
+        font-size: 0.9rem;
+        color: $sec-color;
+        &:hover {
+          color: $main-color;
+        }
+      }
+    }
+    hr {
+      margin-top: 0;
+    }
+    .social-log {
+      @extend %flex-center-center;
+      flex-direction: column;
+      h3 {
+        margin: 0 {
+          bottom: $main-element-padding;
+        }
+      }
+      .links {
+        @extend %flex-center-center;
+        gap: $main-element-padding;
+        a {
+          @extend %flex-center-center;
+          @extend %border-radius-50;
+          width: 40px;
+          height: 40px;
+          background-color: $sec-color;
+          &:hover {
+            i {
+              color: $main-color;
+            }
+          }
+          i {
+            color: $white-color;
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .right {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $main-transparent-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.2;
+    }
+    @extend %flex-center-center;
+    width: 50%;
+    background-image: url(../Data/Images/IMG_20221204_221527_467.jpg);
+    position: relative;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    .text {
+      text-align: center;
+      color: $white-color;
+      z-index: 2;
+      h1,
+      h2 {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        font-family: "Yesteryear", cursive;
+        font-size: 3.5rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+  }
+}

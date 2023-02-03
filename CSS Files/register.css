@@ -1,0 +1,671 @@
+*, ::after,
+::before {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+body, ul, ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body, .card .left form .check-box input:checked::after, .card .left form .field, .card .left .log-link, .card .right, .card .left form input[type=submit],
+.card .left form input[type=reset], .card .right .text a, section .container .sec-foot a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .left form .check-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.card .left form section .sec-flex, .card .left form .name .data, .card .left form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.card .left form .gender .choose input::before, .card .left form .gender .choose input::after {
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+
+.head-shape span::after, .head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before, .card .left form section .sec-flex::after, .card .left form .field::after {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card .left form .gender .choose input::before, .card .left form .gender .choose input::after, .head-shape span,
+.head-shape-w span {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+i {
+  transition: 0s !important;
+  -webkit-transition: 0s !important;
+  -moz-transition: 0s !important;
+  -ms-transition: 0s !important;
+  -o-transition: 0s !important;
+}
+
+.card .left form section .sec-flex::after, .card .left form .field::after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.card .left form input[type=submit],
+.card .left form input[type=reset], .card .right .text a, section .container .sec-foot a {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+.card .left form input[type=submit]:hover,
+.card .left form input[type=reset]:hover, .card .right .text a:hover, section .container .sec-foot a:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+/* Start Global Rules:- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  background-position: center;
+  background-size: cover;
+}
+
+html {
+  scrollbar-color: #059cb1 #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  color: #059cb1;
+}
+
+ul {
+  list-style: none;
+}
+input[type=submit],
+input[type=reset],
+input[type=button],
+a {
+  cursor: pointer;
+}
+
+input {
+  caret-color: #059cb1;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Start Media Quires:- */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/* End Media Quires */
+/* Start Animation Styling:- */
+@-webkit-keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+@keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+/* End Animation Styling */
+/* Start Selection Styling:- */
+::-moz-selection {
+  background: #000;
+  color: #059cb1;
+}
+
+::selection {
+  background: #000;
+  color: #059cb1;
+}
+
+/* End Selection Styling */
+/* Start Scroll Bar Styling:- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #059cb1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #59c1bd;
+}
+
+/* End Scroll Bar Styling */
+/* Start Head-Shape Styling:- */
+.head-shape,
+.head-shape-w {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.head-shape span,
+.head-shape-w span {
+  display: block;
+  margin: auto;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 2px solid #59c1bd;
+}
+.head-shape span::after, .head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before {
+  content: "";
+  height: 2px;
+  width: calc(50% - 20px);
+  background-color: #59c1bd;
+  position: absolute;
+  top: 50%;
+}
+.head-shape span::before,
+.head-shape-w span::before {
+  left: 5px;
+}
+.head-shape span::after,
+.head-shape-w span::after {
+  right: 5px;
+}
+
+.head-shape-w span {
+  border-color: #fff;
+}
+.head-shape-w span::after, .head-shape-w span::before {
+  background-color: #fff;
+}
+
+/* End Head-Shape Styling */
+section .container .sec-head {
+  padding-bottom: 100px;
+  text-align: center;
+}
+section .container .sec-head h2 {
+  font-size: 1.9rem;
+  color: #059cb1;
+  margin: 0;
+  margin-bottom: 10px;
+}
+section .container .sec-head p {
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+section .container .sec-foot {
+  padding-top: 100px;
+}
+body {
+  min-height: 100vh;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .card {
+    max-width: 400px;
+  }
+}
+.card .left {
+  width: 50%;
+  padding: 20px;
+  padding-top: 80px;
+}
+@media (max-width: 767px) {
+  .card .left {
+    width: 100%;
+    padding-top: 50px;
+  }
+}
+.card .left .back-btn {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card .left .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+.card .left .back-btn .f-icon {
+  font-size: 1.3rem;
+}
+.card .left .head {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.card .left .head h2,
+.card .left .head p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .left .head h2 {
+  color: #059cb1;
+}
+.card .left .head p {
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .card .left .head {
+    display: none;
+  }
+}
+.card .left form section {
+  margin-bottom: 20px;
+}
+.card .left form section .sec-flex {
+  position: relative;
+  padding-right: 25px;
+}
+@media (max-width: 991px) {
+  .card .left form .name > label {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .card .left form .name .data {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 20px;
+  }
+}
+@media (max-width: 991px) {
+  .card .left form .name .data div {
+    width: 100%;
+  }
+}
+.card .left form .name .data div label {
+  display: none;
+}
+@media (max-width: 991px) {
+  .card .left form .name .data div label {
+    display: block;
+  }
+}
+@media (max-width: 991px) {
+  .card .left form .name .data div .field input::-webkit-input-placeholder {
+    color: transparent;
+  }
+  .card .left form .name .data div .field input::-moz-placeholder {
+    color: transparent;
+  }
+  .card .left form .name .data div .field input:-ms-input-placeholder {
+    color: transparent;
+  }
+  .card .left form .name .data div .field input::-ms-input-placeholder {
+    color: transparent;
+  }
+  .card .left form .name .data div .field input::placeholder {
+    color: transparent;
+  }
+}
+.card .left form .buttons {
+  gap: 10px;
+}
+@media (max-width: 767px) {
+  .card .left form .buttons {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 370px) {
+  .card .left form .buttons {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.card .left form .check-box {
+  gap: 10px;
+}
+.card .left form .check-box label {
+  font-size: 0.9rem;
+}
+.card .left form .check-box label a {
+  color: #59c1bd;
+}
+.card .left form .check-box label a:hover {
+  color: #059cb1;
+}
+.card .left form .check-box input {
+  cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 0px;
+}
+.card .left form .check-box input::before, .card .left form .check-box input::after {
+  position: absolute;
+}
+.card .left form .check-box input::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1.5px solid #59c1bd;
+}
+.card .left form .check-box input:hover::before {
+  border-color: #059cb1;
+}
+.card .left form .check-box input::after {
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  background-color: #059cb1;
+  transform: translate(-50%, -50%) rotate(3turn);
+  -webkit-transform: translate(-50%, -50%) rotate(3turn);
+  -moz-transform: translate(-50%, -50%) rotate(3turn);
+  -ms-transform: translate(-50%, -50%) rotate(3turn);
+  -o-transform: translate(-50%, -50%) rotate(3turn);
+}
+.card .left form .check-box input:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  left: calc(50% + 1px);
+  top: calc(50% + 1px);
+  font-size: 1rem;
+  border: 2px solid #059cb1;
+  width: 100%;
+  height: 101%;
+  transform: translate(-50%, -50%) rotate(0);
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+  -moz-transform: translate(-50%, -50%) rotate(0);
+  -ms-transform: translate(-50%, -50%) rotate(0);
+  -o-transform: translate(-50%, -50%) rotate(0);
+}
+.card .left form .field {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border-bottom: 2px solid #59c1bd;
+  position: relative;
+  gap: 10px;
+}
+.card .left form .field input[type=text],
+.card .left form .field input[type=email],
+.card .left form .field input[type=Password] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 10px 0;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.card .left form .field i {
+  color: #59c1bd;
+}
+.card .left form .gender p {
+  margin: 0;
+  margin-top: 10px;
+}
+@media (max-width: 991px) {
+  .card .left form .gender p:first-of-type {
+    display: none;
+  }
+}
+.card .left form .gender p:last-of-type {
+  display: none;
+}
+@media (max-width: 991px) {
+  .card .left form .gender p:last-of-type {
+    display: block;
+  }
+}
+.card .left form .gender .choose input {
+  margin-bottom: 5px;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  cursor: pointer;
+}
+.card .left form .gender .choose input::before, .card .left form .gender .choose input::after {
+  content: "";
+  position: absolute;
+}
+.card .left form .gender .choose input::before {
+  width: 16px;
+  height: 16px;
+  background-color: #fff;
+  border: 1.5px solid #59c1bd;
+}
+.card .left form .gender .choose input:hover::before {
+  border-color: #059cb1;
+}
+.card .left form .gender .choose input::after {
+  width: 0;
+  height: 0;
+}
+.card .left form .gender .choose input:checked::before {
+  border-color: #059cb1;
+}
+.card .left form .gender .choose input:checked:after {
+  width: 12px;
+  height: 12px;
+  background-color: #059cb1;
+}
+.card .left form .gender .choose label {
+  cursor: pointer;
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+.card .left form input[type=date] {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  text-align: center;
+  margin-left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #59c1bd;
+  background-color: transparent;
+}
+.card .left .log-link {
+  gap: 10px;
+}
+.card .left .log-link a {
+  font-size: 1rem;
+  color: #59c1bd;
+}
+.card .left .log-link a:hover {
+  color: #059cb1;
+}
+@media (min-width: 768px) {
+  .card .left .log-link {
+    display: none;
+  }
+}
+.card .right {
+  width: 50%;
+  background-image: url(../Data/Images/IMG_20221204_221445_961.jpg);
+  position: relative;
+}
+.card .right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 156, 177, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.6;
+}
+@media (max-width: 767px) {
+  .card .right {
+    display: none;
+  }
+}
+.card .right .text {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+.card .right .text p {
+  margin: auto;
+  max-width: 70%;
+}
+.card .right .text h1 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .right .text h2 {
+  margin: 20px 0;
+  font-family: "Yesteryear", cursive;
+  font-size: 2.4rem;
+}
+.card .right .text h3 {
+  margin: 20px 0;
+}
+.card .right .text a:hover {
+  background-color: #fff;
+}

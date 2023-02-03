@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize css files -->
+    <link rel="stylesheet" href="./CSS Files/normalize.css" />
+    <!-- font-awesome css file -->
+    <link rel="stylesheet" href="./CSS Files/all.min.css" />
+    <!-- bootstrap css file -->
+    <link rel="stylesheet" href="./CSS Files/bootstrap.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="./CSS Files/master.css" />
+    <!-- font open-sans files -->
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <title>main page</title>
+  </head>
+  <body>
+    <!-- Start Header -->
+    <header id="navbar_top" class="navbar">
+      <div class="container">
+        <div class="logo">
+          <a href="#top">
+            <h1 id="logoText">hope</h1>
+          </a>
+        </div>
+        <!-- <div class="nav-icon" id="navIcon">
+          <span id="shape"></span>
+          <span id="shape"></span>
+          <span id="shape"></span>
+        </div> -->
+        <nav id="nav">
+          <ul id="links">
+            <li class="link">
+              <a href="#top">
+                <i class="f-icon fa-solid fa-house"></i>
+                <span>home</span>
+              </a>
+            </li>
+            <!-- <li class="link">
+              <a href="#services">
+                <i></i>
+                <span>services</span>
+              </a>
+            </li> -->
+            <li class="link">
+              <a href="#doctors">
+                <i class="f-icon fa-solid fa-user-doctor"></i>
+                <span>doctors</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#medicine">
+                <i class="f-icon fa-solid fa-pills"></i>
+                <span>medicines</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#radiation">
+                <i class="f-icon fa-solid fa-hospital"></i>
+                <span>radiation places</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#blog">
+                <i class="f-icon fa-solid fa-book-open-reader"></i>
+                <span>blog</span>
+              </a>
+            </li>
+            <li class="link">
+              <a href="#contact-us">
+                <!-- <i class="f-icon fa-solid fa-phone"></i> -->
+                <!-- <i class="f-icon fa-solid fa-headset"></i> -->
+                <i class="f-icon fa-solid fa-comments"></i>
+                <span>contact us</span>
+              </a>
+            </li>
+            <!-- <li class="link">
+              <a class="regist" href="./HTML Files/register.html">register</a>
+            </li>
+            <li class="link">
+              <a class="log-in" href="./HTML Files/log_in.html">log in</a>
+            </li> -->
+          </ul>
+        </nav>
+        <div class="account">
+          <a class="log-in" href="./HTML Files/log_in.html">log in</a>
+          <a class="regist" href="./HTML Files/register.html">register</a>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- Start Main -->
+    <main>
+      <!-- Start Slider -->
+      <!-- <section class="slider">
+        <div
+          id="carouselExampleInterval"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="slid-nav carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="1000">
+              <img
+                src="./Data/Images/doctors-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="doctors-slider-image"
+              />
+              <div class="caption carousel-caption d-none d-md-block">
+                <h5>first slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img
+                src="./Data/Images/medicines-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="medicines-slider-image"
+              />
+              <div class="caption carousel-caption d-none d-md-block">
+                <h5>second slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="3000">
+              <img
+                src="./Data/Images/radiation-slider-image-1.jpg"
+                class="d-block w-100"
+                alt="radiation-slider-image"
+              />
+              <div class="caption carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Some representative placeholder content for the third slide.
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev prev"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next next"
+            type="button"
+            data-bs-target="#carouselExampleInterval"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </section> -->
+      <!-- End Slider -->
+      <!-- Start Landing -->
+      <section class="landing" id="landing">
+        <div class="container">
+          <div class="down-btn">
+            <a href="#services">
+              <i class="fa-solid fa-angles-down"></i>
+            </a>
+          </div>
+          <div class="left">
+            <h2>welcome to hope</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, harum
+              a ullam ducimus nulla reprehenderit quod ea vero consequatur
+              minus, delectus, eligendi corrupti aliquam! Voluptate dolore amet
+              quia similique beatae.
+            </p>
+          </div>
+          <div class="right">
+            <img src="./Data/Images/24237733_6906778.jpg" alt="Landing-Image" />
+          </div>
+        </div>
+      </section>
+      <!-- End Landing -->
+      <!-- Start Services -->
+      <section class="services" id="services">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our services</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <!-- Start Box -->
+            <article class="box">
+              <a href="#doctors">
+                <i class="fa-solid fa-user-doctor"></i>
+                <h3>doctors</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                  Blanditiis accusantium. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit, Blanditiis accusantium.
+                </p>
+              </a>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <a href="#medicine">
+                <i class="fa-solid fa-pills"></i>
+                <h3>medicines</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                  Blanditiis accusantium. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit, Blanditiis accusantium.
+                </p>
+              </a>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <a href="#radiation">
+                <i class="fa-solid fa-hospital"></i>
+                <h3>radiation places</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                  Blanditiis accusantium. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit, Blanditiis accusantium.
+                </p>
+              </a>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <a href="#blog">
+                <!-- <i class="fa-solid fa-newspaper"></i> -->
+                <i class="fa-solid fa-book-open-reader"></i>
+                <h3>blog</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit,
+                  Blanditiis accusantium. Lorem ipsum dolor sit amet consectetur
+                  adipisicing elit, Blanditiis accusantium.
+                </p>
+              </a>
+            </article>
+            <!-- End Box -->
+          </div>
+        </div>
+      </section>
+      <!-- End Services -->
+      <!-- Start Doctors -->
+      <section class="doctors" id="doctors">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our doctors</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <!-- Start Box -->
+            <article class="box">
+              <img src="./Data/Images/doctor-image-7.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.twitter.com/">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://maps.google.com/">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/552196312XXXX">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="tel:+18475555555">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <img src="./Data/Images/doctor-image-11.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.twitter.com/">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://maps.google.com/">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/552196312XXXX">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="tel:+18475555555">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <img
+                src="./Data/Images/IMG_20221204_221426_372.jpg"
+                alt="doctor-image"
+              />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.twitter.com/">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://maps.google.com/">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/552196312XXXX">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="tel:+18475555555">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <img src="./Data/Images/doctor-image-8.jpg" alt="doctor-image" />
+              <div class="info">
+                <h5>john doe</h5>
+                <p>department</p>
+                <div class="contact">
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.twitter.com/">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://maps.google.com/">
+                      <i class="fa-solid fa-location-dot"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/552196312XXXX">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="tel:+18475555555">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+          </div>
+          <div class="sec-foot">
+            <a href="#">see more</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Doctors -->
+      <!-- Start Medicine -->
+      <section class="medicine" id="medicine">
+        <div class="container">
+          <div class="sec-head">
+            <h2>medicines</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <!-- Start Box -->
+            <article class="box">
+              <img
+                src="./Data/Images/medicines-slider-image-2.jpg"
+                alt="medicine-image"
+              />
+              <div class="info">
+                <a href="">
+                  <i class="fa-solid fa-link"></i>
+                  <h4>medicine name</h4>
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia vitae perspiciatis veritatis fugit tempora quo
+                  excepturi, amet deleniti dolor.
+                </p>
+              </div>
+            </article>
+            <!-- Start Box -->
+            <!-- End Box -->
+            <article class="box">
+              <img
+                src="./Data/Images/medicines-slider-image-4.jpg"
+                alt="medicine-image"
+              />
+              <div class="info">
+                <a href="">
+                  <i class="fa-solid fa-link"></i>
+                  <h4>medicine name</h4>
+                </a>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Mollitia vitae perspiciatis veritatis fugit tempora quo
+                  excepturi, amet deleniti dolor.
+                </p>
+              </div>
+            </article>
+            <!-- End Box -->
+          </div>
+          <div class="sec-foot">
+            <a href="#">see more</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Medicine -->
+      <!-- Start Radiation -->
+      <section class="radiation" id="radiation">
+        <div class="container">
+          <div class="sec-head">
+            <h2>radiation places</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi
+              illum, eius earum rem consequatur minima? Illum, laudantium
+              officia! Nihil, id.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <div class="text">
+              <h2>Lorem ipsum dolor sit amet</h2>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Eveniet, earum tenetur harum sed eos maxime architecto culpa
+                distinctio, odit laudantium similique molestias fugit rem, ipsa
+                quasi veniam ea iure? Earum, non aut deserunt possimus maxime
+                quibusdam reprehenderit esse dolor amet officiis nam velit
+                dolorem nesciunt soluta ratione fugit autem ipsam consequatur
+                explicabo atque magnam molestias, ad est. Velit pariatur
+                similique atque aliquid quisquam at molestiae non laudantium
+                quidem beatae. Sunt.
+              </p>
+              <a href="#">see more</a>
+            </div>
+            <div class="image"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Radiation -->
+      <!-- Start Blog -->
+      <section class="blog" id="blog">
+        <div class="container">
+          <div class="sec-head">
+            <h2>our blog</h2>
+            <p>
+              Lorem Ipsum Dolor Sit Amet Consectetur Adipisicing Elit. Modi
+              Illum, Eius Earum Rem Consequatur Minima? Illum, Laudantium
+              Officia! Nihil, Id.
+            </p>
+            <div class="head-shape">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <!-- Start Box -->
+            <article class="box">
+              <div class="image">
+                <img
+                  src="./Data/Images/pexels-pavel-danilyuk-8442105.jpg"
+                  alt="article-image"
+                />
+              </div>
+              <div class="text">
+                <a href="#">
+                  <h3>article title</h3>
+                </a>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                  impedit laboriosam enim facilis.
+                </p>
+                <div class="info">
+                  <span>author: </span>
+                  <span class="input" id="input">john doe</span>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <div class="image">
+                <img
+                  src="./Data/Images/IMG_20221204_221446_098.jpg"
+                  alt="article-image"
+                />
+              </div>
+              <div class="text">
+                <a href="#">
+                  <h3>article title</h3>
+                </a>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                  impedit laboriosam enim facilis.
+                </p>
+                <div class="info">
+                  <span>author: </span>
+                  <span class="input" id="input">john doe</span>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+            <!-- Start Box -->
+            <article class="box">
+              <div class="image">
+                <img
+                  src="./Data/Images/IMG_20221204_221443_587.jpg"
+                  alt="article-image"
+                />
+              </div>
+              <div class="text">
+                <a href="#">
+                  <h3>article title</h3>
+                </a>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit. At
+                  impedit laboriosam enim facilis.
+                </p>
+                <div class="info">
+                  <span>author: </span>
+                  <span class="input" id="input">john doe</span>
+                </div>
+              </div>
+            </article>
+            <!-- End Box -->
+          </div>
+          <div class="sec-foot">
+            <a href="#">see more</a>
+          </div>
+        </div>
+      </section>
+      <!-- End Blog -->
+      <!-- Start Contact -->
+      <section class="contact-us" id="contact-us">
+        <div class="container">
+          <div class="sec-head">
+            <h2>contact us</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa
+              consequatur ullam excepturi dolores repellat, minus assumenda
+              exercitationem.
+            </p>
+            <div class="head-shape-w">
+              <span></span>
+            </div>
+          </div>
+          <div class="sec-body">
+            <div class="sec-left">
+              <div class="contact-info">
+                <h2>contact info</h2>
+                <div class="box">
+                  <div class="icon-div">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <span>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit
+                    molestiae vitae nam.
+                  </span>
+                </div>
+                <div class="box">
+                  <div class="icon-div">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <span>monsfd@gmail.com</span>
+                </div>
+                <div class="box">
+                  <div class="icon-div">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <span>+12353245</span>
+                </div>
+              </div>
+              <div class="social-icon">
+                <h2>contact links</h2>
+                <div>
+                  <div>
+                    <a href="https://www.facebook.com/">
+                      <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.instagram.com/">
+                      <i class="fa-brands fa-instagram"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://www.twitter.com/">
+                      <i class="fa-brands fa-twitter"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="mailto:@mohagmail@gmail.com">
+                      <i class="fa-solid fa-envelope"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="https://wa.me/552196312XXXX">
+                      <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                  </div>
+                  <div>
+                    <a href="tel:+18475555555">
+                      <i class="fa-solid fa-phone"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="sec-right">
+              <h2>leave a message</h2>
+              <form action="">
+                <textarea name="message" placeholder="message"></textarea>
+                <input type="submit" value="send" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Contact-->
+      <!-- Start Top Button -->
+      <div class="top" id="up">
+        <a href="#">
+          <i class="fa-solid fa-angle-up"></i>
+        </a>
+      </div>
+      <!-- End Top Button -->
+    </main>
+    <!-- End Main -->
+    <!-- Start Footer -->
+    <footer>
+      <div class="container">
+        <div class="f-info">
+          <div class="f-logo">
+            <h1>hope</h1>
+          </div>
+          <div class="f-text">
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut, amet sunt eius molestiae
+              repellat voluptas quaerat quidem?
+            </p>
+          </div>
+          <div class="f-social">
+            <div>
+              <a href="https://www.facebook.com/">
+                <i class="fa-brands fa-facebook-f"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.instagram.com/">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://www.twitter.com/">
+                <i class="fa-brands fa-twitter"></i>
+              </a>
+            </div>
+            <div>
+              <a href="mailto:@mohagmail@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+            <div>
+              <a href="https://wa.me/552196312XXXX">
+                <i class="fa-brands fa-whatsapp"></i>
+              </a>
+            </div>
+            <div>
+              <a href="tel:+18475555555">
+                <i class="fa-solid fa-phone"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="f-links">
+          <h3>important links</h3>
+          <ul>
+            <li>
+              <a href="#top">home</a>
+            </li>
+            <li>
+              <a href="">doctors</a>
+            </li>
+            <li>
+              <a href="">medicines</a>
+            </li>
+            <li>
+              <a href="">radiation places</a>
+            </li>
+            <li>
+              <a href="">our blog</a>
+            </li>
+            <li>
+              <a href="">contact us</a>
+            </li>
+          </ul>
+        </div>
+        <div class="f-blog">
+          <h3>from our blog</h3>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+          <article>
+            <a href="">
+              <h4>article title</h4>
+            </a>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere
+              commodi eveniet aspernatur obcaecati, itaque temporibus at
+              quibusdam nostrum nulla, esse veniam aut.
+            </p>
+            <div class="info">
+              <span>author: </span>
+              <span class="input" id="input">john doe</span>
+            </div>
+          </article>
+        </div>
+      </div>
+      <div class="rights">
+        <p>
+          Copyright &copy; 2023 <span> hope</span>, made by -
+          <a href="">🚑66-اسعاف🚨</a>
+        </p>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <!--script-->
+    <script src="./JS Files/main.js"></script>
+    <!-- bootstrap js file -->
+    <script src="./JS Files/bootstrap.bundle.js"></script>
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>

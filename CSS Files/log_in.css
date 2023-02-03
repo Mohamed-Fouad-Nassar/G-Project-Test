@@ -1,0 +1,532 @@
+*, ::after,
+::before {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+body, ul, ul li {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body, .card .left form section .field, .card .left form section .left-sec input:checked::after, .card .left .reg-link, .card .left .social-log, .card .left .social-log .links, .card .left .social-log .links a, .card .right, .card .left form input[type=submit], section .container .sec-foot a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card .left form section:last-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.head-shape span::after, .head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before, .card .left form section .field::after {
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.card {
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.card .left .social-log .links a, .head-shape span,
+.head-shape-w span {
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+i {
+  transition: 0s !important;
+  -webkit-transition: 0s !important;
+  -moz-transition: 0s !important;
+  -ms-transition: 0s !important;
+  -o-transition: 0s !important;
+}
+
+.card .left form section .field::after {
+  font-weight: 900;
+  font-family: "Font Awesome 5 Free";
+  position: absolute;
+  right: 0;
+  top: 50%;
+}
+
+.card .left form input[type=submit], section .container .sec-foot a {
+  width: 160px;
+  margin: 0 auto;
+  outline: none;
+  color: #fff;
+  border: 1px solid #059cb1;
+  background-color: #059cb1;
+  padding: 10px 20px;
+}
+.card .left form input[type=submit]:hover, section .container .sec-foot a:hover {
+  color: #059cb1;
+  background-color: transparent;
+  border-color: #059cb1;
+}
+
+/* Start Global Rules:- */
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  background-position: center;
+  background-size: cover;
+}
+
+html {
+  scrollbar-color: #059cb1 #fff;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+a:hover {
+  color: #059cb1;
+}
+
+ul {
+  list-style: none;
+}
+input[type=submit],
+input[type=reset],
+input[type=button],
+a {
+  cursor: pointer;
+}
+
+input {
+  caret-color: #059cb1;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Start Media Quires:- */
+@media (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+/* End Media Quires */
+/* Start Animation Styling:- */
+@-webkit-keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+@keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+/* End Animation Styling */
+/* Start Selection Styling:- */
+::-moz-selection {
+  background: #000;
+  color: #059cb1;
+}
+
+::selection {
+  background: #000;
+  color: #059cb1;
+}
+
+/* End Selection Styling */
+/* Start Scroll Bar Styling:- */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #059cb1;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #59c1bd;
+}
+
+/* End Scroll Bar Styling */
+/* Start Head-Shape Styling:- */
+.head-shape,
+.head-shape-w {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+}
+.head-shape span,
+.head-shape-w span {
+  display: block;
+  margin: auto;
+  height: 17px;
+  width: 17px;
+  background-color: transparent;
+  border: 2px solid #59c1bd;
+}
+.head-shape span::after, .head-shape span::before,
+.head-shape-w span::after,
+.head-shape-w span::before {
+  content: "";
+  height: 2px;
+  width: calc(50% - 20px);
+  background-color: #59c1bd;
+  position: absolute;
+  top: 50%;
+}
+.head-shape span::before,
+.head-shape-w span::before {
+  left: 5px;
+}
+.head-shape span::after,
+.head-shape-w span::after {
+  right: 5px;
+}
+
+.head-shape-w span {
+  border-color: #fff;
+}
+.head-shape-w span::after, .head-shape-w span::before {
+  background-color: #fff;
+}
+
+/* End Head-Shape Styling */
+section .container .sec-head {
+  padding-bottom: 100px;
+  text-align: center;
+}
+section .container .sec-head h2 {
+  font-size: 1.9rem;
+  color: #059cb1;
+  margin: 0;
+  margin-bottom: 10px;
+}
+section .container .sec-head p {
+  max-width: 750px;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: #555;
+}
+section .container .sec-foot {
+  padding-top: 100px;
+}
+body {
+  min-height: 100vh;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  max-width: 950px;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  overflow: hidden;
+  position: relative;
+}
+@media (max-width: 767px) {
+  .card {
+    max-width: 400px;
+  }
+}
+.card .left {
+  width: 50%;
+  padding: 20px;
+  padding-top: 50px;
+}
+@media (max-width: 767px) {
+  .card .left {
+    width: 100%;
+  }
+}
+.card .left .back-btn {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.card .left .back-btn:hover .f-icon {
+  color: #059cb1;
+}
+.card .left .back-btn .f-icon {
+  font-size: 1.3rem;
+}
+.card .left .head {
+  text-align: center;
+  padding-bottom: 20px;
+}
+.card .left .head h2,
+.card .left .head p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .left .head h2 {
+  color: #059cb1;
+}
+.card .left .head p {
+  font-size: 0.9rem;
+}
+.card .left form section {
+  padding-bottom: 20px;
+}
+.card .left form section label {
+  margin-bottom: 10px;
+}
+.card .left form section .field {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  border-bottom: 2px solid #59c1bd;
+  position: relative;
+}
+.card .left form section .field input {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 7px 10px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+.card .left form section .field i {
+  color: #59c1bd;
+}
+.card .left form section .left-sec {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+}
+.card .left form section .left-sec input {
+  cursor: pointer;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  margin-bottom: 0px;
+}
+.card .left form section .left-sec input::before, .card .left form section .left-sec input::after {
+  position: absolute;
+}
+.card .left form section .left-sec input::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  background-color: #fff;
+  border: 1.5px solid #59c1bd;
+}
+.card .left form section .left-sec input:hover::before {
+  border-color: #059cb1;
+}
+.card .left form section .left-sec input::after {
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 2px;
+  background-color: #059cb1;
+  transform: translate(-50%, -50%) rotate(3turn);
+  -webkit-transform: translate(-50%, -50%) rotate(3turn);
+  -moz-transform: translate(-50%, -50%) rotate(3turn);
+  -ms-transform: translate(-50%, -50%) rotate(3turn);
+  -o-transform: translate(-50%, -50%) rotate(3turn);
+}
+.card .left form section .left-sec input:checked::after {
+  content: "\f00c";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  color: #fff;
+  left: calc(50% + 1px);
+  top: calc(50% + 1px);
+  font-size: 1rem;
+  border: 2px solid #059cb1;
+  width: 100%;
+  height: 101%;
+  transform: translate(-50%, -50%) rotate(0);
+  -webkit-transform: translate(-50%, -50%) rotate(0);
+  -moz-transform: translate(-50%, -50%) rotate(0);
+  -ms-transform: translate(-50%, -50%) rotate(0);
+  -o-transform: translate(-50%, -50%) rotate(0);
+}
+.card .left form section .left-sec label {
+  margin: 0;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.card .left form section .right-sec a {
+  font-size: 0.9rem;
+  color: #59c1bd;
+}
+.card .left form section .right-sec a:hover {
+  color: #059cb1;
+}
+.card .left .reg-link {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.card .left .reg-link a {
+  font-size: 0.9rem;
+  color: #59c1bd;
+}
+.card .left .reg-link a:hover {
+  color: #059cb1;
+}
+.card .left hr {
+  margin-top: 0;
+}
+.card .left .social-log {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.card .left .social-log h3 {
+  margin: 0;
+  margin-bottom: 20px;
+}
+.card .left .social-log .links {
+  gap: 20px;
+}
+.card .left .social-log .links a {
+  width: 40px;
+  height: 40px;
+  background-color: #59c1bd;
+}
+.card .left .social-log .links a:hover i {
+  color: #059cb1;
+}
+.card .left .social-log .links a i {
+  color: #fff;
+  font-size: 1.2rem;
+}
+.card .right {
+  width: 50%;
+  background-image: url(../Data/Images/IMG_20221204_221527_467.jpg);
+  position: relative;
+}
+.card .right::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(5, 156, 177, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  opacity: 0.2;
+}
+@media (max-width: 767px) {
+  .card .right {
+    display: none;
+  }
+}
+.card .right .text {
+  text-align: center;
+  color: #fff;
+  z-index: 2;
+}
+.card .right .text h1,
+.card .right .text h2 {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.card .right .text h2 {
+  font-family: "Yesteryear", cursive;
+  font-size: 3.5rem;
+}
+.card .right .text p {
+  margin: 0;
+}

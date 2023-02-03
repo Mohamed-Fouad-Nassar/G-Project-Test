@@ -1,0 +1,599 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+// import header styling:-
+@use "../sections/header" as *;
+// import footer styling:-
+@use "../sections/footer" as *;
+
+// additional page styling
+main {
+  // Start Slider Styling:-
+  // .slider {
+  //   div {
+  //     max-height: calc(100vh - 66px);
+  //   }
+  //   .slid-nav {
+  //     button.active {
+  //       background-color: $main-color;
+  //     }
+  //   }
+  //   .prev,
+  //   .next {
+  //     &:hover {
+  //       span {
+  //         color: rgb(5 156 177);
+  //       }
+  //     }
+  //   }
+  //   .caption {
+  //     @extend %flex-center-center;
+  //     @extend %translate-y-50;
+  //     flex-direction: column;
+  //     display: flex !important;
+  //     bottom: initial;
+  //     padding: $up-down-padding;
+  //     background-color: $main-transparent-color;
+  //     width: 100%;
+  //     position: absolute;
+  //     left: 0;
+  //     top: 50%;
+  //     h5 {
+  //       margin-bottom: $main-element-padding;
+  //     }
+  //     p {
+  //       margin-bottom: 0;
+  //     }
+  //     @media (max-width: 767px) {
+  //       padding: 50px;
+  //       h5 {
+  //         font-size: 1.2rem;
+  //         margin-bottom: $sec-element-padding;
+  //       }
+  //       p {
+  //         @include max-chars(4);
+  //         font-size: 0.85rem;
+  //       }
+  //     }
+  //   }
+  // }
+  // End Slider Styling
+  // Start Landing Styling:-
+  .landing {
+    @extend %flex-center-center;
+    padding: $up-down-padding 0;
+    background-color: $white-color;
+    min-height: calc(100vh - 68px);
+    position: relative;
+    @media (max-width: 767px) {
+      min-height: calc(100vh - 117px);
+    }
+    // &::before {
+    //   content: "";
+    //   background-color: $light-white-color;
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   min-height: 600px;
+    //   z-index: -1;
+    //   -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+    //   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 95%);
+    // }
+    .container {
+      @extend %flex-center-center;
+      gap: 20px;
+      @media (max-width: 767px) {
+        flex-direction: column;
+      }
+      .down-btn {
+        @include trans-y(-50%);
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        a {
+          &:hover {
+            i {
+              color: $sec-color;
+            }
+          }
+          i {
+            font-size: 1.6rem;
+            color: $main-color;
+            -webkit-animation: up-down-btn 0.3s linear infinite alternate;
+            animation: up-down-btn 0.3s linear infinite alternate;
+          }
+        }
+      }
+      .left {
+        flex-basis: 50%;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+          text-align: center;
+        }
+        h2 {
+          font-size: 1.9rem;
+          color: $main-color;
+        }
+        p {
+          color: $sec-text-color;
+        }
+      }
+      .right {
+        flex-basis: 50%;
+        @media (max-width: 767px) {
+          flex-basis: 100%;
+          // display: none;
+        }
+      }
+    }
+  }
+  // End Landing Styling
+  // Start Services Styling:-
+  .services {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-250-20;
+        .box {
+          &::before,
+          &::after {
+            content: "";
+            position: absolute;
+            height: 0;
+            width: 3px;
+            background-color: $main-color;
+            transition: 0.5s;
+            -webkit-transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+          }
+          &::before {
+            left: 0;
+            bottom: 0;
+          }
+          &::after {
+            right: 0;
+            top: 0;
+          }
+          @extend %border-radius-5;
+          padding: $main-element-padding $sec-element-padding;
+          position: relative;
+          &:hover {
+            box-shadow: $main-box-shadow;
+            &::after,
+            &::before {
+              height: 100%;
+            }
+          }
+          a {
+            text-align: center;
+            i {
+              @extend %border-radius-50;
+              @extend %flex-center-center;
+              margin: auto;
+              width: 80px;
+              height: 80px;
+              font-size: 2rem;
+              color: $white-color;
+              background-color: $main-color;
+            }
+            h3 {
+              font-size: 1.5rem;
+              color: $main-color;
+              margin: $main-element-padding 0;
+            }
+            p {
+              margin: 0;
+              color: $sec-text-color;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Services Styling
+  // Start Doctors Styling:-
+  .doctors {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        @extend %grid-200-20;
+        .box {
+          @extend %border-radius-5;
+          box-shadow: $main-box-shadow;
+          position: relative;
+          overflow: hidden;
+          @media (max-width: 575px) {
+            max-width: 250px;
+            margin: auto;
+          }
+          &:hover {
+            @include trans-y(-10px);
+            .info {
+              bottom: 0;
+            }
+            img {
+              @include scale(1.1);
+            }
+          }
+          img {
+            width: 100%;
+          }
+          .info {
+            position: absolute;
+            bottom: -50px;
+            left: 0;
+            width: 100%;
+            background-color: $transparent-color;
+            padding: $sec-element-padding;
+            h5 {
+              color: $main-color;
+            }
+            p {
+              font-size: 0.9rem;
+            }
+            .contact {
+              @extend %social-media;
+              justify-content: center;
+              flex-wrap: nowrap;
+              padding: 0;
+              > div {
+                a {
+                  width: 30px;
+                  height: 30px;
+                  i {
+                    font-size: 1.1rem;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Doctors Styling
+  // Start Medicine Styling:-
+  .medicine {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-350-20;
+        @media (max-width: 575px) {
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
+        .box {
+          &::before {
+            @extend %border-radius-5;
+            @extend %translate-50;
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            width: 0;
+            height: 0;
+            background-color: $dark-transparent-color;
+            z-index: 2;
+          }
+          @extend %border-radius-5;
+          box-shadow: $main-box-shadow;
+          overflow: hidden;
+          position: relative;
+          z-index: 1;
+          .info {
+            @extend %translate-50;
+            text-align: center;
+            display: block;
+            padding: $main-element-padding;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: calc(100% - 60px);
+            z-index: -1;
+            opacity: 0;
+            a {
+              display: block;
+              margin-bottom: $sec-element-padding;
+              color: $sec-color;
+              &:hover {
+                i,
+                h4 {
+                  color: $main-color;
+                }
+              }
+              i {
+                margin-bottom: $sec-element-padding;
+                font-size: 2rem;
+                color: $sec-color;
+                @media (max-width: 575px) {
+                  font-size: 1.5rem;
+                }
+              }
+              h4 {
+                margin-bottom: $sec-element-padding;
+                font-size: 1.5rem;
+                color: $sec-color;
+                @media (max-width: 575px) {
+                  font-size: 1.1rem;
+                }
+              }
+            }
+            p {
+              @include max-chars(3);
+              margin: 0;
+              font-size: 0.9rem;
+              color: $white-color;
+              @media (max-width: 575px) {
+                font-size: 0.8rem;
+              }
+            }
+          }
+          &:hover {
+            &::before {
+              width: calc(100% - 40px);
+              height: calc(100% - 40px);
+            }
+            img {
+              @include scale(1.2);
+            }
+            .info {
+              opacity: 1;
+              z-index: 3;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Medicine Styling
+  // Start Radiation Styling:-
+  .radiation {
+    padding: $up-down-padding 0;
+    .container {
+      .sec-body {
+        @extend %flex--between;
+        background-color: $light-white-color;
+        @media (max-width: 991px) {
+          flex-direction: column;
+        }
+        .text {
+          width: 50%;
+          padding: $up-down-padding $main-element-padding;
+          @media (max-width: 991px) {
+            width: 100%;
+          }
+          h2 {
+            margin-bottom: $main-element-padding;
+            font-size: 1.5rem;
+            font-weight: 600;
+          }
+          p {
+            margin-bottom: 40px;
+          }
+          a {
+            @extend %button-shape;
+            margin-left: 0;
+          }
+        }
+        .image {
+          width: 50%;
+          padding: 0;
+          background-image: url(../Data/Images/3d-render-medical-background-showing-virus-cells-male-figures-lungs_1048-6289.webp);
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  // End Radiation Styling
+  // Start Blog Styling:-
+  .blog {
+    padding: $up-down-padding 0;
+    background-color: $light-white-color;
+    .container {
+      .sec-body {
+        @extend %grid-250-20;
+        article {
+          @extend %border-radius-5;
+          box-shadow: $main-box-shadow;
+          overflow: hidden;
+          &:hover {
+            @include trans-y(-10px);
+          }
+          .text {
+            padding: $sec-element-padding;
+            background-color: $white-color;
+            a {
+              h3 {
+                font: {
+                  size: 1.2rem;
+                  weight: 600;
+                }
+              }
+            }
+            p {
+              @include max-chars(2);
+              margin-bottom: $sec-element-padding;
+              font-size: 0.9rem;
+            }
+            .info {
+              @extend %article-info;
+            }
+          }
+        }
+      }
+    }
+  }
+  // End Blog Styling
+  // Start Top Button Styling:-
+  .top {
+    display: none;
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    z-index: 100000;
+    a {
+      @extend %flex-center-center;
+      @extend %border-radius-5;
+      width: 40px;
+      height: 40px;
+      background-color: $main-color;
+      border: 2px solid $main-color;
+      font-size: 1.5rem;
+      i {
+        color: $white-color;
+      }
+      &:hover {
+        background-color: $white-color;
+        border-color: $main-color;
+        i {
+          color: $main-color;
+        }
+      }
+    }
+  }
+  // End Top Button Styling
+  // Start Contact Us Styling:-
+  .contact-us {
+    padding: $up-down-padding 0;
+    // background-image: url(../Data/Images/contact-background-image.jpg);
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: $main-transparent-color;
+      z-index: -1;
+      opacity: 0.9;
+    }
+    .container {
+      color: $white-color;
+      .sec-head {
+        h2,
+        p {
+          color: $white-color;
+        }
+      }
+      .sec-body {
+        @extend %flex-start-between;
+        gap: $main-element-padding;
+        @media (max-width: 767px) {
+          flex-direction: column;
+          gap: $up-down-padding;
+        }
+        h2 {
+          margin-bottom: $main-element-padding;
+          font-size: 1.5rem;
+          font-weight: 600;
+        }
+        .sec-left {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          .contact-info {
+            .box {
+              display: flex;
+              align-items: center;
+              gap: $sec-element-padding;
+              margin-bottom: $sec-element-padding;
+              &:last-of-type {
+                margin: 0;
+              }
+              .icon-div {
+                i {
+                  @extend %flex-center-center;
+                  @extend %border-radius-50;
+                  width: 45px;
+                  height: 45px;
+                  background-color: $sec-color;
+                  color: $white-color;
+                  font-size: 1.5rem;
+                }
+              }
+              span {
+                color: $white-color;
+              }
+            }
+          }
+          .social-icon {
+            padding-top: $up-down-padding;
+            > div {
+              @extend %social-media;
+              > div {
+                a {
+                  @extend %border-radius-50;
+                  width: 45px;
+                  height: 45px;
+                }
+              }
+            }
+          }
+        }
+        .sec-right {
+          width: 50%;
+          @media (max-width: 767px) {
+            width: 100%;
+          }
+          form {
+            textarea {
+              padding: $sec-element-padding;
+              width: 100%;
+              min-height: 250px;
+              border: 1px solid $sec-color;
+              outline: none;
+              resize: none;
+              caret-color: $main-color;
+              background-color: $main-color;
+              color: $white-color;
+              &::-webkit-input-placeholder {
+                color: $white-color;
+              }
+              &::-moz-placeholder {
+                color: $white-color;
+              }
+              &:-ms-input-placeholder {
+                color: $white-color;
+              }
+              &::-ms-input-placeholder {
+                color: $white-color;
+              }
+              &::placeholder {
+                color: $white-color;
+              }
+              &:focus {
+                border-color: $main-color;
+                background-color: $main-transparent-color;
+              }
+            }
+            input[type="submit"] {
+              @extend %button-shape;
+              margin-top: $main-element-padding;
+              margin-right: 0;
+              &:hover {
+                color: $white-color;
+                border-color: $white-color;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // End contact Us Styling
+}

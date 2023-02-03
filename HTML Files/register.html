@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- normalize css files -->
+    <link rel="stylesheet" href="../CSS Files/normalize.css" />
+    <!-- font-awesome css file -->
+    <link rel="stylesheet" href="../CSS Files/all.min.css" />
+    <!-- main css file -->
+    <link rel="stylesheet" href="../CSS Files/register.css" />
+    <!-- font open-sans files -->
+    <!-- font-family: 'Open Sans', sans-serif; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font Yesteryear files -->
+    <!-- font-family: 'Yesteryear', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Yesteryear&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ion-icons js files -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <title>rejecter page</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <div class="left">
+          <button class="back-btn" id="cancel">
+            <i class="f-icon fa-solid fa-arrow-left"></i>
+            <!-- <i class="fa-solid fa-left-long"></i> -->
+            <!-- <i class="fa-solid fa-chevron-left"></i> -->
+          </button>
+          <div class="head">
+            <h2>register</h2>
+            <p>
+              please enter your details to sign up and to be part of our great
+              community
+            </p>
+          </div>
+          <form action="">
+            <section class="name">
+              <label>full name:</label>
+              <div class="data">
+                <div class="f-name">
+                  <label for="field">first name:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="firstName"
+                      placeholder="First Name"
+                    />
+                    <i class="f-icon fa-solid fa-user"></i>
+                  </div>
+                </div>
+                <div class="l-name">
+                  <label for="field">last name:</label>
+                  <div class="field">
+                    <input
+                      class="input"
+                      type="text"
+                      id="field"
+                      name="lastName"
+                      placeholder="Last Name"
+                    />
+                    <i class="f-icon fa-solid fa-user"></i>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section class="e-mail">
+              <label for="field">e-mail:</label>
+              <div class="field">
+                <input class="input" type="email" id="field" name="email" />
+                <i class="fa-regular fa-envelope"></i>
+              </div>
+            </section>
+            <section class="password">
+              <label for="field">password:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="password"
+                  id="field"
+                  name="password"
+                />
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </section>
+            <section class="password">
+              <label for="field">confirm password:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="Password"
+                  id="field"
+                  name="confirmPassword"
+                />
+                <i class="f-icon fa-solid fa-lock"></i>
+              </div>
+            </section>
+            <section class="phone">
+              <label for="field">phone number:</label>
+              <div class="field">
+                <input
+                  class="input"
+                  type="text"
+                  id="field"
+                  name="phoneNumber"
+                  pattern="[0-9]"
+                />
+                <i class="fa-solid fa-phone"></i>
+              </div>
+            </section>
+            <section class="gender">
+              <label>gender:</label>
+              <div class="sec-flex">
+                <p>please choose your gender:</p>
+                <p>your gender:</p>
+                <div class="choose">
+                  <input type="radio" name="gender" id="male" />
+                  <label for="male">
+                    <!-- <i class="fa-solid fa-mars"></i> -->
+                    male
+                  </label>
+                </div>
+                <div class="choose">
+                  <input type="radio" name="gender" id="female" />
+                  <label for="female">
+                    <!-- <i class="fa-solid fa-venus"></i> -->
+                    female
+                  </label>
+                </div>
+              </div>
+            </section>
+            <section class="birth-date">
+              <div class="sec-flex">
+                <label>date of birth:</label>
+                <input type="date" />
+              </div>
+            </section>
+            <section class="check-box">
+              <input type="checkbox" name="agree" id="terms" />
+              <label for="terms"
+                >i agree with all
+                <a href="#">terms of use</a>
+                and
+                <a href="#">our privacy policy</a>
+              </label>
+            </section>
+            <div class="buttons">
+              <input type="submit" value="Confirm" />
+              <input type="reset" value="clear form" />
+            </div>
+          </form>
+          <div class="log-link">
+            <span>already have account?</span>
+            <a href="./log_in.html" id="logIn"> log in </a>
+          </div>
+        </div>
+        <div class="right">
+          <div class="text">
+            <h1>register</h1>
+            <p>
+              please enter your details to sign up and to be part of our great
+              community
+            </p>
+            <h2>hope</h2>
+            <h3>already have account?</h3>
+            <a href="./log_in.html" id="logIn"> log in </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../JS Files/test.js"></script>
+  </body>
+</html>

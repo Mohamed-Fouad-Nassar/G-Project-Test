@@ -1,0 +1,138 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+footer {
+  background-color: $footer-background;
+  padding: $up-down-padding 0;
+  .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    @media (max-width: 991px) {
+      gap: 40px;
+    }
+    > div {
+      h3 {
+        font-size: 1.3rem;
+        margin: 0;
+        color: $light-white-color;
+      }
+    }
+    .f-info {
+      .f-logo {
+        h1 {
+          font: {
+            family: "Yesteryear", cursive;
+            size: 2.5rem;
+          }
+          color: $main-color;
+          margin: 0 {
+            left: 4px;
+          }
+        }
+      }
+      .f-text {
+        p {
+          color: $dark-white-color;
+          margin: $main-element-padding 0;
+        }
+      }
+      .f-social {
+        @extend %social-media;
+      }
+    }
+    .f-links {
+      ul {
+        padding-top: $sec-element-padding;
+        li {
+          border-bottom: 1px solid $light-white-color;
+          a {
+            &::before {
+              @extend %zero-trans;
+              content: "\f101";
+              font: {
+                family: "Font Awesome 6 Free";
+                weight: 900;
+              }
+              margin-right: $sec-element-padding;
+            }
+            display: block;
+            padding: 7px 0;
+            color: $light-white-color;
+            position: relative;
+            &:hover {
+              color: $main-color;
+              padding-left: $main-element-padding;
+            }
+          }
+        }
+      }
+    }
+    .f-blog {
+      color: $light-white-color;
+      article {
+        padding: $sec-element-padding 0;
+        border-bottom: 1px solid $max-dark-white-color;
+        &:last-of-type {
+          border-bottom: none;
+          padding-bottom: 0;
+        }
+        a {
+          h4 {
+            margin: {
+              bottom: 5px;
+              top: $sec-element-padding;
+            }
+            @include max-chars(1);
+            font-size: 1.1rem;
+            letter-spacing: 1.5px;
+            color: $light-white-color;
+          }
+          &:hover {
+            h4 {
+              color: $main-color;
+            }
+          }
+        }
+        p {
+          color: $dark-white-color;
+          font-size: 0.85rem;
+          margin-bottom: 5px;
+          @include max-chars(3);
+        }
+        .info {
+          @extend %article-info;
+          span {
+            color: $light-white-color;
+          }
+        }
+      }
+    }
+  }
+  .rights {
+    p {
+      margin: {
+        top: 30px;
+        bottom: -30px;
+      }
+      text-align: center;
+      color: $max-dark-white-color;
+      a {
+        color: $light-white-color;
+        font-size: 1.1rem;
+        &:hover {
+          color: $max-dark-white-color;
+        }
+      }
+      span {
+        font-family: "Yesteryear", cursive;
+        font-size: 1.5rem;
+        color: $light-white-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,264 @@
+@use "./variables" as *;
+@use "./helpers" as *;
+
+/* Start Global Rules:- */
+
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+  font-family: "Open Sans", sans-serif;
+  background-position: center;
+  background-size: cover;
+  @extend %transition;
+}
+
+html {
+  scrollbar-color: $main-color $white-color;
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+  @extend %reset;
+}
+
+::after,
+::before {
+  @extend %transition;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  @extend %link;
+  &:hover {
+    color: $main-color;
+  }
+}
+
+i {
+  @extend %zero-trans;
+}
+
+ul {
+  list-style: none;
+  @extend %reset;
+  li {
+    @extend %reset;
+  }
+}
+
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+a {
+  cursor: pointer;
+}
+
+input {
+  caret-color: $main-color;
+}
+
+.container {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Start Media Quires:- */
+
+@media (max-width: 575px) {
+  .container {
+    padding: 0 10px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}
+
+/* End Media Quires */
+
+/* Start Animation Styling:- */
+
+// @-webkit-keyframes up-down-image {
+//   from {
+//     margin-top: 40px;
+//   }
+//   to {
+//     margin-bottom: 40px;
+//   }
+// }
+
+// @keyframes up-down-image {
+//   from {
+//     margin-top: 40px;
+//   }
+//   to {
+//     margin-bottom: 40px;
+//   }
+// }
+
+//    -webkit-animation: up-down-image 2s linear infinite alternate;
+// animation: up-down-image 2s linear infinite alternate;
+
+@-webkit-keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+
+@keyframes up-down-btn {
+  from {
+    margin-top: 15px;
+  }
+  to {
+    margin-bottom: 15px;
+  }
+}
+// -webkit-animation: up-down-btn 0.3s linear infinite alternate;
+// animation: up-down-btn 0.3s linear infinite alternate;
+
+/* End Animation Styling */
+
+/* Start Selection Styling:- */
+
+::-moz-selection {
+  background: $black-color;
+  color: $main-color;
+}
+
+::selection {
+  background: $black-color;
+  color: $main-color;
+}
+
+/* End Selection Styling */
+
+/* Start Scroll Bar Styling:- */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: $white-color;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $main-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: $sec-color;
+}
+
+/* End Scroll Bar Styling */
+
+/* Start Head-Shape Styling:- */
+
+.head-shape,
+.head-shape-w {
+  max-width: 600px;
+  margin: auto;
+  position: relative;
+  span {
+    @extend %border-radius-50;
+    display: block;
+    margin: auto;
+    height: 17px;
+    width: 17px;
+    background-color: transparent;
+    border: 2px solid $sec-color;
+    &::after,
+    &::before {
+      @extend %translate-y-50;
+      content: "";
+      height: 2px;
+      width: calc(50% - 20px);
+      background-color: $sec-color;
+      position: absolute;
+      top: 50%;
+    }
+    &::before {
+      left: 5px;
+    }
+    &::after {
+      right: 5px;
+    }
+  }
+}
+.head-shape-w {
+  span {
+    border-color: $white-color;
+    &::after,
+    &::before {
+      background-color: $white-color;
+    }
+  }
+}
+
+/* End Head-Shape Styling */
+
+section {
+  .container {
+    .sec-head {
+      padding-bottom: $up-down-padding;
+      text-align: center;
+      h2 {
+        font-size: 1.9rem;
+        color: $main-color;
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      p {
+        max-width: 750px;
+        margin: 0 auto {
+          bottom: $main-element-padding;
+        }
+        font-size: 0.9rem;
+        color: $sec-text-color;
+      }
+    }
+    .sec-foot {
+      padding-top: $up-down-padding;
+      a {
+        @extend %button-shape;
+      }
+    }
+  }
+}

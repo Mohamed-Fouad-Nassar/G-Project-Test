@@ -1,0 +1,276 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+// additional page styling
+
+body {
+  min-height: 100vh;
+  @extend %flex-center-center;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+.card {
+  @extend %border-radius-10;
+  max-width: 950px;
+  margin: auto;
+  display: flex;
+  background-color: $white-color;
+  overflow: hidden;
+  position: relative;
+  @media (max-width: 767px) {
+    max-width: 400px;
+  }
+  .left {
+    width: 50%;
+    padding: $main-element-padding {
+      top: $main-element-padding * 4;
+    }
+    @media (max-width: 767px) {
+      width: 100%;
+      padding-top: $up-down-padding / 2;
+    }
+    .back-btn {
+      @include back-btn($main-element-padding, $sec-element-padding);
+    }
+    .head {
+      text-align: center;
+      padding-bottom: $main-element-padding;
+      h2,
+      p {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        color: $main-color;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+    form {
+      section {
+        margin-bottom: $main-element-padding;
+        .sec-flex {
+          @extend %flex-center-between;
+          position: relative;
+          padding-right: 25px;
+          &::after {
+            @extend %error-sign;
+          }
+        }
+      }
+      .name {
+        > label {
+          @media (max-width: 991px) {
+            display: none;
+          }
+        }
+        .data {
+          @extend %flex-center-between;
+          @media (max-width: 991px) {
+            flex-direction: column;
+            gap: $main-element-padding;
+          }
+          div {
+            @media (max-width: 991px) {
+              width: 100%;
+            }
+            label {
+              display: none;
+              @media (max-width: 991px) {
+                display: block;
+              }
+            }
+            .field {
+              input {
+                @media (max-width: 991px) {
+                  &::-webkit-input-placeholder {
+                    color: transparent;
+                  }
+                  &::-moz-placeholder {
+                    color: transparent;
+                  }
+                  &:-ms-input-placeholder {
+                    color: transparent;
+                  }
+                  &::-ms-input-placeholder {
+                    color: transparent;
+                  }
+                  &::placeholder {
+                    color: transparent;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .buttons {
+        @extend %flex-center-between;
+        gap: $sec-element-padding;
+        @media (max-width: 767px) {
+          margin-bottom: $main-element-padding;
+        }
+        @media (max-width: 370px) {
+          flex-direction: column;
+        }
+      }
+      .check-box {
+        @extend %flex-center-start;
+        gap: $sec-element-padding;
+        label {
+          font-size: 0.9rem;
+          a {
+            color: $sec-color;
+            &:hover {
+              color: $main-color;
+            }
+          }
+        }
+        input {
+          @include check-box-shape($main-color);
+        }
+      }
+      .field {
+        @extend %flex-center-center;
+        flex-direction: row-reverse;
+        border-bottom: 2px solid $sec-color;
+        position: relative;
+        gap: 10px;
+        &::after {
+          @extend %error-sign;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="Password"] {
+          flex: 1;
+          padding: $sec-element-padding 0;
+          border: none;
+          outline: none;
+          background-color: transparent;
+        }
+        i {
+          color: $sec-color;
+        }
+      }
+      .gender {
+        p {
+          margin: 0 {
+            top: 10px;
+          }
+          &:first-of-type {
+            @media (max-width: 991px) {
+              display: none;
+            }
+          }
+          &:last-of-type {
+            display: none;
+            @media (max-width: 991px) {
+              display: block;
+            }
+          }
+        }
+        .choose {
+          input {
+            margin-bottom: 5px;
+            @include radio-shape($main-color);
+          }
+          label {
+            cursor: pointer;
+            display: inline-block;
+            margin: {
+              left: $sec-element-padding;
+              top: $sec-element-padding;
+              bottom: 0;
+            }
+          }
+        }
+      }
+      input[type="date"] {
+        flex: 1;
+        text-align: center;
+        margin-left: $sec-element-padding;
+        padding: $field-top-padding $sec-element-padding;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid $sec-color;
+        background-color: transparent;
+      }
+      input[type="submit"],
+      input[type="reset"] {
+        @extend %button-shape;
+      }
+    }
+    .log-link {
+      @extend %flex-center-center;
+      gap: $sec-element-padding;
+      a {
+        font-size: 1rem;
+        color: $sec-color;
+        &:hover {
+          color: $main-color;
+        }
+      }
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .right {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 100%;
+      background-color: $main-transparent-color;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      opacity: 0.6;
+    }
+    @extend %flex-center-center;
+    width: 50%;
+    background-image: url(../Data/Images/IMG_20221204_221445_961.jpg);
+    position: relative;
+    @media (max-width: 767px) {
+      display: none;
+    }
+    .text {
+      text-align: center;
+      color: $white-color;
+      z-index: 2;
+      p {
+        margin: auto;
+        max-width: 70%;
+      }
+      h1 {
+        margin: 0 {
+          bottom: $sec-element-padding;
+        }
+      }
+      h2 {
+        margin: $main-element-padding 0;
+        font-family: "Yesteryear", cursive;
+        font-size: 2.4rem;
+      }
+      h3 {
+        margin: $main-element-padding 0;
+      }
+      a {
+        @extend %button-shape;
+        &:hover {
+          background-color: $white-color;
+        }
+      }
+    }
+  }
+}

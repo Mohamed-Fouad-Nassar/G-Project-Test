@@ -1,0 +1,110 @@
+// import global rules
+@use "../Global-rules/global" as *;
+// import placeholders and mixins
+@use "../Global-rules/helpers" as *;
+// import variables
+@use "../Global-rules/variables" as *;
+
+// additional page styling
+
+body {
+  min-height: 100vh;
+  @extend %flex-center-center;
+  background-image: url(../Data/Images/log_in_background.png);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+}
+
+.card {
+  @extend %border-radius-10;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: $up-down-padding / 2 $main-element-padding;
+  max-width: 850px;
+  margin: auto;
+  background-color: $white-color;
+  @media (max-width: 767px) {
+    max-width: 400px;
+  }
+  .head {
+    padding: 0;
+    padding-bottom: 50px;
+    max-width: 85%;
+    margin: auto;
+    text-align: center;
+    @media (max-width: 767px) {
+      max-width: 100%;
+    }
+    h2 {
+      margin: 0 {
+        bottom: 10px;
+      }
+    }
+    p {
+      margin: 0;
+      color: $sec-text-color;
+      @media (max-width: 767px) {
+        font-size: 0.95rem;
+      }
+    }
+  }
+  .body {
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      section {
+        min-width: 70%;
+        margin: auto;
+        @media (max-width: 767px) {
+          min-width: 100%;
+        }
+        label {
+          display: block;
+          margin-bottom: 10px;
+        }
+        .field {
+          @extend %flex-center-center;
+          flex-direction: row-reverse;
+          border-bottom: 2px solid $sec-color;
+          position: relative;
+          &::after {
+            @extend %error-sign;
+          }
+          input[type="text"] {
+            flex: 1;
+            padding: $field-top-padding $sec-element-padding;
+            border: none;
+            outline: none;
+            background-color: transparent;
+          }
+          .f-icon {
+            color: $sec-color;
+          }
+        }
+      }
+      .btns {
+        @extend %flex-center-center;
+        gap: 20px;
+        @media (max-width: 400px) {
+          flex-direction: column;
+          gap: 10px;
+        }
+        input[type="submit"],
+        input[type="button"] {
+          @extend %button-shape;
+          display: inline-block;
+          margin: initial;
+          @media (max-width: 400px) {
+            width: 100%;
+          }
+        }
+        input[type="button"] {
+          background-color: $sec-color;
+          border-color: $sec-color;
+        }
+      }
+    }
+  }
+}
